@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sydney Bill — Communications &amp; Research Specialist</title>
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,700;1,6..72,500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --blue:#2569A6;
+    --blue-deep:#153A57;
+    --gold:#F5B722;
+    --paper:#F4F6F9;
+    --white:#FFFFFF;
+    --ink:#12283B;
+    --ink-soft:rgba(18,40,59,0.68);
+    --line:rgba(18,40,59,0.12);
+  }
+  *{ box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+  body{
+    margin:0;
+    background:var(--white);
+    color:var(--ink);
+    font-family:'IBM Plex Sans', sans-serif;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{
+    font-family:'Newsreader', serif;
+    margin:0;
+    font-weight:600;
+  }
+  a{ color:inherit; }
+  :focus-visible{ outline:3px solid var(--gold); outline-offset:2px; }
+  img{ max-width:100%; display:block; }
+
+  .wrap{ max-width:1180px; margin:0 auto; padding:0 32px; }
+
+  /* NAV */
+  nav{
+    position:sticky; top:0; z-index:50;
+    display:flex; justify-content:space-between; align-items:center;
+    padding:20px 32px;
+    background:rgba(255,255,255,0.92);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--line);
+  }
+  .mark{ font-family:'Newsreader', serif; font-weight:600; font-size:1.15rem; }
+  .mark small{ display:block; font-family:'IBM Plex Sans',sans-serif; font-size:0.72rem; font-weight:500; color:var(--ink-soft); }
+  .navlinks{ display:flex; gap:26px; font-size:0.92rem; }
+  .navlinks a{ text-decoration:none; border-bottom:2px solid transparent; padding-bottom:2px; transition:border-color .2s ease; }
+  .navlinks a:hover, .navlinks a:focus-visible{ border-color:var(--gold); }
+  @media (max-width:640px){ .navlinks{ gap:14px; font-size:0.82rem; } nav{ padding:16px 20px; } }
+
+  /* HERO */
+  .hero{
+    position:relative;
+    padding:96px 0 72px;
+    overflow:hidden;
+    background:linear-gradient(180deg, var(--paper) 0%, var(--white) 100%);
+  }
+  .hero-grid{
+    display:grid;
+    grid-template-columns:1.05fr 0.95fr;
+    gap:56px;
+    align-items:center;
+  }
+  .hero p.kicker{
+    color:var(--blue);
+    font-weight:600;
+    font-size:0.98rem;
+    margin-bottom:14px;
+  }
+  .hero h1{
+    font-size:clamp(2.4rem, 4.6vw, 3.6rem);
+    line-height:1.08;
+    letter-spacing:-0.01em;
+    max-width:560px;
+  }
+  .hero h1 em{ font-style:italic; color:var(--blue); font-weight:500; }
+  .hero-sub{
+    margin-top:22px;
+    max-width:460px;
+    color:var(--ink-soft);
+    font-size:1.05rem;
+  }
+  .cta-row{ margin-top:34px; display:flex; gap:14px; flex-wrap:wrap; }
+  .btn{
+    display:inline-block; padding:13px 26px; border-radius:6px;
+    font-weight:600; text-decoration:none; font-size:0.95rem;
+    transition:transform .2s ease, box-shadow .2s ease;
+  }
+  .btn-solid{ background:var(--blue); color:#fff; }
+  .btn-outline{ border:1.5px solid var(--line); color:var(--ink); }
+  .btn:hover{ transform:translateY(-2px); }
+  .btn-solid:hover{ box-shadow:0 10px 22px -8px rgba(37,105,166,0.45); }
+
+  .fan{
+    position:relative;
+    height:420px;
+  }
+  .fan img{
+    position:absolute;
+    width:230px;
+    border-radius:10px;
+    box-shadow:0 24px 50px -18px rgba(18,40,59,0.35);
+    border:1px solid var(--line);
+  }
+  .fan .f1{ top:0; left:10%; transform:rotate(-7deg); z-index:1; }
+  .fan .f2{ top:40px; left:38%; transform:rotate(4deg); z-index:2; }
+  .fan .f3{ top:8px; left:60%; transform:rotate(-2deg); z-index:3; width:210px; }
+  @media (max-width:900px){
+    .hero-grid{ grid-template-columns:1fr; }
+    .fan{ height:300px; margin-top:20px; }
+    .fan img{ width:170px; }
+  }
+
+  /* SECTIONS */
+  .section{ padding:96px 0; }
+  .section-head{
+    display:flex; justify-content:space-between; align-items:flex-end;
+    gap:24px; margin-bottom:44px; flex-wrap:wrap;
+  }
+  .section-head h2{ font-size:clamp(1.7rem,3.4vw,2.3rem); max-width:520px; }
+  .section-head p{ max-width:340px; color:var(--ink-soft); font-size:0.96rem; }
+
+  .about{ background:var(--blue-deep); color:#fff; }
+  .about .section-head p{ color:rgba(255,255,255,0.68); }
+  .about-grid{ display:grid; grid-template-columns:1fr 1fr; gap:56px; }
+  .about p{ font-size:1.08rem; color:rgba(255,255,255,0.86); max-width:480px; }
+  .about p + p{ margin-top:18px; }
+  .stat-row{ display:flex; gap:36px; margin-top:32px; flex-wrap:wrap; }
+  .stat b{ font-family:'Newsreader', serif; font-size:2rem; display:block; color:var(--gold); }
+  .stat span{ font-size:0.85rem; color:rgba(255,255,255,0.6); }
+  @media (max-width:800px){ .about-grid{ grid-template-columns:1fr; } }
+
+  /* FILTERS */
+  .filters{
+    display:flex; gap:10px; flex-wrap:wrap; margin-bottom:36px;
+  }
+  .filter-btn{
+    padding:9px 18px; border-radius:100px; border:1.5px solid var(--line);
+    background:transparent; font-family:'IBM Plex Sans',sans-serif;
+    font-size:0.88rem; font-weight:500; cursor:pointer; color:var(--ink-soft);
+    transition:all .2s ease;
+  }
+  .filter-btn.active{ background:var(--blue); border-color:var(--blue); color:#fff; }
+  .filter-btn:hover:not(.active){ border-color:var(--blue); color:var(--blue); }
+
+  /* GALLERY */
+  .gallery{
+    columns:3 260px;
+    column-gap:22px;
+  }
+  .piece{
+    break-inside:avoid;
+    margin-bottom:22px;
+    border-radius:10px;
+    overflow:hidden;
+    border:1px solid var(--line);
+    cursor:pointer;
+    background:var(--paper);
+    transition:transform .3s cubic-bezier(.2,.8,.2,1), box-shadow .3s ease;
+  }
+  .piece:hover{ transform:translateY(-4px); box-shadow:0 18px 34px -16px rgba(18,40,59,0.28); }
+  .piece img{ width:100%; }
+  .piece-cap{ padding:14px 16px 16px; }
+  .piece-cap h3{ font-size:1rem; font-weight:600; font-family:'IBM Plex Sans',sans-serif; }
+  .piece-cap span{ font-size:0.8rem; color:var(--ink-soft); }
+  @media (max-width:700px){ .gallery{ columns:1 100%; } }
+
+  /* LIGHTBOX */
+  .lightbox{
+    position:fixed; inset:0; z-index:100;
+    background:rgba(18,40,59,0.88);
+    display:none;
+    align-items:center; justify-content:center;
+    padding:40px 20px;
+  }
+  .lightbox.open{ display:flex; }
+  .lightbox img{
+    max-height:90vh; max-width:min(720px,90vw);
+    border-radius:8px;
+    box-shadow:0 30px 60px rgba(0,0,0,0.4);
+  }
+  .lightbox-close{
+    position:absolute; top:24px; right:32px;
+    background:none; border:none; color:#fff; font-size:2rem;
+    cursor:pointer; line-height:1; padding:6px;
+  }
+  .lightbox-cap{
+    position:absolute; bottom:28px; left:0; right:0;
+    text-align:center; color:rgba(255,255,255,0.85); font-size:0.95rem;
+  }
+
+  /* PROCESS BAND */
+  .process{ background:var(--paper); }
+  .process-grid{
+    display:grid; grid-template-columns:repeat(3,1fr); gap:28px;
+  }
+  .process-card{
+    background:#fff; border:1px solid var(--line); border-radius:12px;
+    padding:28px;
+  }
+  .process-card h3{ font-size:1.15rem; margin-bottom:10px; }
+  .process-card p{ color:var(--ink-soft); font-size:0.95rem; }
+  @media (max-width:800px){ .process-grid{ grid-template-columns:1fr; } }
+
+  /* CONTACT */
+  .contact{ background:var(--white); text-align:left; }
+  .contact-box{
+    background:var(--blue);
+    color:#fff;
+    border-radius:20px;
+    padding:64px 56px;
+    position:relative;
+    overflow:hidden;
+  }
+  .contact-box::after{
+    content:'';
+    position:absolute; right:-60px; bottom:-60px;
+    width:220px; height:220px; border-radius:50%;
+    background:var(--gold); opacity:0.9;
+  }
+  .contact-box h2{ color:#fff; font-size:clamp(1.9rem,4vw,2.7rem); max-width:600px; position:relative; z-index:2; }
+  .contact-email{
+    display:inline-block; margin-top:28px;
+    font-family:'Newsreader', serif; font-style:italic;
+    font-size:clamp(1.2rem,2.4vw,1.6rem);
+    color:var(--gold); text-decoration:none;
+    border-bottom:2px solid transparent;
+    position:relative; z-index:2;
+  }
+  .contact-email:hover{ border-color:var(--gold); }
+
+  footer{
+    display:flex; justify-content:space-between; align-items:center;
+    padding:36px 32px 48px; flex-wrap:wrap; gap:14px;
+    color:var(--ink-soft); font-size:0.88rem;
+  }
+  .footer-links{ display:flex; gap:20px; }
+  .footer-links a{ text-decoration:none; }
+  .footer-links a:hover{ color:var(--blue); }
+
+  /* VIDEO GALLERY */
+  .video-piece{
+    break-inside:avoid;
+    margin-bottom:22px;
+    border-radius:10px;
+    overflow:hidden;
+    border:1px solid var(--line);
+    cursor:pointer;
+    background:var(--paper);
+    transition:transform .3s cubic-bezier(.2,.8,.2,1), box-shadow .3s ease;
+  }
+  .video-piece:hover{ transform:translateY(-4px); box-shadow:0 18px 34px -16px rgba(18,40,59,0.28); }
+  .video-piece video{ width:100%; height:auto; display:block; }
+  .video-piece-cap{ padding:14px 16px 16px; }
+  .video-piece-cap h3{ font-size:1rem; font-weight:600; font-family:'IBM Plex Sans',sans-serif; }
+  .video-piece-cap span{ font-size:0.8rem; color:var(--ink-soft); }
+
+  @media (prefers-reduced-motion: reduce){
+    *{ animation:none !important; transition:none !important; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="mark">Sydney Bill<small>Communications &amp; Research Specialist</small></div>
+  <div class="navlinks">
+    <a href="#work">Work</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="kicker">Research, design &amp; communications for public finance &amp; civic policy</p>
+      <h1>I turn data, policy and fieldwork into <em>stories people actually engage with.</em></h1>
+      <p class="hero-sub">I work across research, communications, and design for development-sector evaluations — collecting and analyzing data in the field, then designing the reports, infographics, and campaign materials that carry those findings to a wider public.</p>
+      <div class="cta-row">
+        <a class="btn btn-solid" href="#work">View the work</a>
+        <a class="btn btn-outline" href="#contact">Get in touch</a>
+      </div>
+    </div>
+    <div class="fan">
+      <img class="f1" src="assets/land-rates-cover.png" alt="The Land Rates Puzzle policy brief cover">
+      <img class="f2" src="assets/fiscal-priorities-cover.png" alt="Assessing Shifts in Fiscal Priorities report cover">
+      <img class="f3" src="assets/budget-credibility.png" alt="Strengthening Budget Credibility infographic">
+    </div>
+  </div>
+</header>
+
+<section class="section about" id="about">
+  <div class="wrap about-grid">
+    <div>
+      <h2 style="color:#fff; margin-bottom:22px;">How I approach the work</h2>
+      <p>Public finance and development data is dense by nature — my job starts long before the design stage. Whether I'm transcribing a direct interview, cleaning survey data, or analyzing a public finance article for policy insight, I'm looking for the one number or finding that matters most, then building the page, post, or report around making that unmissable.</p>
+      <p>That means my work spans the full pipeline: research and data collection in the field, technical analysis and reporting at the desk, and finally the visual design, i.e., infographics, reports, and campaign materials that makes it land. Every piece I design carries a consistent system, so a reader recognizes the same disciplined voice whether they're holding a printed brief, reviewing an evaluation report, or scrolling past a social post.</p>
+      <div class="stat-row">
+        <div class="stat"><b>20+</b><span>reports &amp; policy briefs designed</span></div>
+        <div class="stat"><b>30+</b><span>data infographics produced</span></div>
+        <div class="stat"><b>1</b><span>consistent brand system, built to scale</span></div>
+      </div>
+    </div>
+    <div>
+      <img src="assets/annual-report-cover.png" alt="IPF Progress Annual Report 2025 cover" style="border-radius:14px; box-shadow:0 30px 60px -20px rgba(0,0,0,0.5);">
+    </div>
+  </div>
+</section>
+
+<section class="section" id="work">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Selected work</h2>
+      <p>Filter by type, or click any piece to see it full size.</p>
+    </div>
+
+    <div class="filters">
+      <button class="filter-btn active" data-filter="all">All work</button>
+      <button class="filter-btn" data-filter="reports">Reports &amp; briefs</button>
+      <button class="filter-btn" data-filter="data">Data stories</button>
+      <button class="filter-btn" data-filter="campaigns">Campaigns &amp; events</button>
+      <button class="filter-btn" data-filter="media">Press &amp; media</button>
+      <button class="filter-btn" data-filter="system">Brand system</button>
+    </div>
+
+    <div class="gallery" id="gallery">
+
+      <div class="piece" data-cat="reports" data-caption="The Land Rates Puzzle — Policy Brief, March 2026">
+        <img src="assets/land-rates-cover.png" alt="The Land Rates Puzzle policy brief cover">
+        <div class="piece-cap"><h3>The Land Rates Puzzle</h3><span>Policy brief cover, 2026</span></div>
+      </div>
+
+      <div class="piece" data-cat="reports" data-caption="The Land Rates Puzzle — interior spread with county revenue data table">
+        <img src="assets/land-rates-context.png" alt="Land Rates Puzzle interior page with data table">
+        <div class="piece-cap"><h3>Land Rates: interior spread</h3><span>Policy brief layout</span></div>
+      </div>
+
+      <div class="piece" data-cat="reports" data-caption="Assessment of the National Assembly&#39;s Review of the FY 2026/27 Budget Estimates">
+        <img src="assets/assembly-review-cover.png" alt="National Assembly Budget Review report cover">
+        <div class="piece-cap"><h3>National Assembly Budget Review</h3><span>Report cover, FY 2026/27</span></div>
+      </div>
+
+      <div class="piece" data-cat="reports" data-caption="National Assembly Budget Review — key findings and revenue projection chart">
+        <img src="assets/assembly-review-chart.png" alt="Budget review interior page with revenue chart">
+        <div class="piece-cap"><h3>Budget Review: findings spread</h3><span>Report layout with chart</span></div>
+      </div>
+
+      <div class="piece" data-cat="reports" data-caption="Health Financing Strategy — cover">
+        <img src="assets/health-financing-cover.png" alt="Health Financing Strategy report cover">
+        <div class="piece-cap"><h3>Health Financing Strategy</h3><span>Strategy document cover</span></div>
+      </div>
+
+      <div class="piece" data-cat="reports" data-caption="Health Financing Strategy — rationale spread with ODA funding chart">
+        <img src="assets/health-financing-rationale.png" alt="Health Financing Strategy interior spread">
+        <div class="piece-cap"><h3>Health Financing: rationale spread</h3><span>Strategy document layout</span></div>
+      </div>
+
+      <div class="piece" data-cat="reports" data-caption="IPF Progress Annual Report 2025 — outcomes spread">
+        <img src="assets/annual-report-outcomes.png" alt="Annual report outcomes page">
+        <div class="piece-cap"><h3>Annual Report: outcomes</h3><span>Progress report, 2025</span></div>
+      </div>
+
+      <div class="piece" data-cat="reports" data-caption="Assessing Shifts in Fiscal Priorities, Sustainability and Service Delivery — FY 2026/27 Budget">
+        <img src="assets/fiscal-priorities-cover.png" alt="Assessing Shifts in Fiscal Priorities report cover">
+        <div class="piece-cap"><h3>Assessing Shifts in Fiscal Priorities</h3><span>Report cover, August 2026</span></div>
+      </div>
+
+      <div class="piece" data-cat="data" data-caption="Strengthening Budget Credibility Through Better Control of Supplementary Expenditure">
+        <img src="assets/budget-credibility.png" alt="Strengthening Budget Credibility infographic">
+        <div class="piece-cap"><h3>Strengthening Budget Credibility</h3><span>Social infographic card</span></div>
+      </div>
+
+      <div class="piece" data-cat="data" data-caption="Key developments in the first 10 months of FY 2025/26 — six-point carousel infographic">
+        <img src="assets/key-developments.png" alt="Key developments numbered infographic">
+        <div class="piece-cap"><h3>Key Developments, FY 2025/26</h3><span>Carousel infographic</span></div>
+      </div>
+
+      <div class="piece" data-cat="data" data-caption="FY 2025/26 total revenue reached KSh 2,601 billion">
+        <img src="assets/revenue-chart.png" alt="Revenue chart infographic">
+        <div class="piece-cap"><h3>Revenue Performance</h3><span>Data chart card</span></div>
+      </div>
+
+      <div class="piece" data-cat="data" data-caption="Closing the Own Source Revenue Gap — positioning women&#39;s economic empowerment at the core of revenue generation">
+        <img src="assets/own-source-revenue.png" alt="Own Source Revenue Gap infographic">
+        <div class="piece-cap"><h3>Closing the Own Source Revenue Gap</h3><span>Social infographic card</span></div>
+      </div>
+
+      <div class="piece" data-cat="data" data-caption="The Scale of Agriculture Finance From Kenya&#39;s Carbon Markets">
+        <img src="assets/agriculture-carbon.png" alt="Agriculture carbon markets infographic">
+        <div class="piece-cap"><h3>Agriculture &amp; Carbon Markets</h3><span>Social infographic card</span></div>
+      </div>
+
+      <div class="piece" data-cat="data" data-caption="IPF Advances Africa&#39;s Debt Reform Agenda — quote card from the African Union dialogue">
+        <img src="assets/debt-reform-quote.png" alt="Debt reform quote card">
+        <div class="piece-cap"><h3>Africa's Debt Reform Agenda</h3><span>Quote card</span></div>
+      </div>
+
+      <div class="piece" data-cat="data" data-caption="Annual National Shadow Budget FY 2026/2027 — External Health Financing">
+        <img src="assets/shadow-budget-health.png" alt="Shadow budget health financing infographic">
+        <div class="piece-cap"><h3>Shadow Budget: Health Financing</h3><span>Social infographic card</span></div>
+      </div>
+
+      <div class="piece" data-cat="data" data-caption="FY 25/26 Budget Performance — Exchequer releases, September 2025">
+        <img src="assets/budget-performance-cover.png" alt="Budget performance report cover card">
+        <div class="piece-cap"><h3>Budget Performance Snapshot</h3><span>Quarterly data report</span></div>
+      </div>
+
+      <div class="piece" data-cat="campaigns" data-caption="IPF Golf Day 2026 — 29th August at Ruiru Sports Club">
+        <img src="assets/golf-day-2026.png" alt="IPF Golf Day 2026 poster">
+        <div class="piece-cap"><h3>IPF Golf Day 2026</h3><span>Event poster</span></div>
+      </div>
+
+      <div class="piece" data-cat="campaigns" data-caption="Golf Day — 23rd August, press-code themed poster">
+        <img src="assets/golf-day-23aug.png" alt="Golf Day event poster, alternate design">
+        <div class="piece-cap"><h3>Golf Day: alternate design</h3><span>Event poster</span></div>
+      </div>
+
+      <div class="piece" data-cat="campaigns" data-caption="Training and Research Initiative for Fiscal Affairs (TaRIFA) — Understanding Climate Finance course flyer">
+        <img src="assets/tarifa-flyer.png" alt="TaRIFA training program flyer">
+        <div class="piece-cap"><h3>TaRIFA: Climate Finance Course</h3><span>Program flyer</span></div>
+      </div>
+
+      <div class="piece" data-cat="system" data-caption="Reusable branded template — report cover framework">
+        <img src="assets/template-blank1.png" alt="Blank branded report template">
+        <div class="piece-cap"><h3>Report cover template</h3><span>Brand system</span></div>
+      </div>
+
+      <div class="piece" data-cat="system" data-caption="Reusable branded template — social card framework">
+        <img src="assets/template-blank2.png" alt="Blank branded social card template">
+        <div class="piece-cap"><h3>Social card template</h3><span>Brand system</span></div>
+      </div>
+
+      <div class="piece" data-cat="system" data-caption="Reusable branded template — carousel slide framework">
+        <img src="assets/template-blank3.png" alt="Blank branded carousel slide template">
+        <div class="piece-cap"><h3>Carousel slide template</h3><span>Brand system</span></div>
+      </div>
+
+      <div class="piece" data-cat="data" data-caption="Kitui County Health Profile — per-person health budget allocation and human resources for health">
+        <img src="assets/kitui-health-profile.png" alt="Kitui County Health Profile infographic">
+        <div class="piece-cap"><h3>Kitui County Health Profile</h3><span>Social infographic card</span></div>
+      </div>
+
+      <div class="piece" data-cat="data" data-caption="Afya ya Kaunti ya Nakuru — Swahili-language county health profile">
+        <img src="assets/nakuru-afya-profile.png" alt="Nakuru County Health Profile infographic in Swahili">
+        <div class="piece-cap"><h3>Nakuru Health Profile (Swahili)</h3><span>Social infographic card</span></div>
+      </div>
+
+      <div class="piece" data-cat="data" data-caption="Afya ya Kaunti ya Mombasa — health budget allocation per person">
+        <img src="assets/mombasa-budget-allocation.png" alt="Mombasa County health budget allocation infographic">
+        <div class="piece-cap"><h3>Mombasa: Budget Allocation</h3><span>Social infographic card</span></div>
+      </div>
+
+      <div class="piece" data-cat="data" data-caption="Mombasa County Health Profile — curative vs preventive care spending">
+        <img src="assets/mombasa-curative-preventive.png" alt="Mombasa curative vs preventive care infographic">
+        <div class="piece-cap"><h3>Mombasa: Curative vs Preventive</h3><span>Social infographic card</span></div>
+      </div>
+
+      <div class="piece" data-cat="data" data-caption="Mombasa County Health Profile — human resources for health">
+        <img src="assets/mombasa-hrh.png" alt="Mombasa human resources for health infographic">
+        <div class="piece-cap"><h3>Mombasa: Human Resources for Health</h3><span>Social infographic card</span></div>
+      </div>
+
+      <div class="piece" data-cat="data" data-caption="Kisumu County debt analysis — fiscal sustainability assessment">
+        <img src="assets/KSM_county_debt.jpeg" alt="Kisumu County debt profile infographic">
+        <div class="piece-cap"><h3>Kisumu County: Debt Analysis</h3><span>County profile card</span></div>
+      </div>
+
+      <div class="piece" data-cat="data" data-caption="Kisumu County pending bills overview — fiscal accountability">
+        <img src="assets/KSM_county_pendind_bills.jpeg" alt="Kisumu County pending bills profile infographic">
+        <div class="piece-cap"><h3>Kisumu County: Pending Bills</h3><span>County profile card</span></div>
+      </div>
+
+      <div class="piece" data-cat="data" data-caption="Key developments in the first 10 months of FY 2026/27 — domestic borrowing and revenue">
+        <img src="assets/key-developments-2.png" alt="Key developments FY2026/27 infographic">
+        <div class="piece-cap"><h3>Key Developments, FY 2026/27</h3><span>Carousel infographic</span></div>
+      </div>
+
+      <div class="piece" data-cat="data" data-caption="Shaping the Next UN Secretary-General — IPF&#39;s SIGAA programme at a regional dialogue in Johannesburg">
+        <img src="assets/un-secretary-general.png" alt="Shaping the Next UN Secretary-General infographic">
+        <div class="piece-cap"><h3>Shaping the Next UN Secretary-General</h3><span>Quote &amp; explainer card</span></div>
+      </div>
+
+      <div class="piece" data-cat="media" data-caption="IPF CEO speaks at the Private Sector Roundtable ahead of The Trust Summit: Nairobi Dialogue on Global Trust">
+        <img src="assets/press-trust-summit.png" alt="IPF CEO at the Trust Summit press feature">
+        <div class="piece-cap"><h3>The Trust Summit Feature</h3><span>Press / social post</span></div>
+      </div>
+
+      <div class="piece" data-cat="media" data-caption="Newspaper Round-Up: Kenya has hit maximum VAT ceiling, warns State think-tank">
+        <img src="assets/press-vat-ceiling.png" alt="VAT ceiling newspaper round-up post">
+        <div class="piece-cap"><h3>Newspaper Round-Up: VAT Ceiling</h3><span>Press digest post</span></div>
+      </div>
+
+      <div class="piece" data-cat="media" data-caption="Newspaper Round-Up: Kenya&#39;s China debt drops 19pc as World Bank exposure hits Sh1.7tr">
+        <img src="assets/press-china-debt.png" alt="China debt newspaper round-up post">
+        <div class="piece-cap"><h3>Newspaper Round-Up: China Debt</h3><span>Press digest post</span></div>
+      </div>
+
+      <div class="piece" data-cat="media" data-caption="Newspaper Round-Up: Report says Kisumu, Nairobi among worst in use of funds">
+        <img src="assets/press-kisumu-nairobi-funds.png" alt="Kisumu Nairobi funds newspaper round-up post">
+        <div class="piece-cap"><h3>Newspaper Round-Up: Use of Funds</h3><span>Press digest post</span></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="section video-editing" id="video-editing">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Video Editing</h2>
+    </div>
+    <div class="gallery">
+      <div class="video-piece" data-caption="Spalta documentary segment — community voices">
+        <video controls style="border-radius:10px;">
+          <source src="assets/Spalta.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <div class="video-piece-cap"><h3>Spalta Documentary</h3><span>Video editing</span></div>
+      </div>
+
+      <div class="video-piece" data-caption="Taarifa 01 training programme video — educational content">
+        <video controls style="border-radius:10px;">
+          <source src="assets/Taarifa 01.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <div class="video-piece-cap"><h3>Taarifa 01</h3><span>Video editing</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section process">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>What I bring to a project</h2>
+    </div>
+    <div class="process-grid">
+      <div class="process-card">
+        <h3>Editorial layout</h3>
+        <p>Long-form reports and policy briefs typeset for a reader who's short on time — clear hierarchy, tables that hold up, findings you can skim.</p>
+      </div>
+      <div class="process-card">
+        <h3>Data storytelling</h3>
+        <p>Turning a single statistic into a card someone stops scrolling for, without distorting what the number actually says.</p>
+      </div>
+      <div class="process-card">
+        <h3>Systems, not one-offs</h3>
+        <p>Reusable templates for covers, cards and carousels, so every new piece looks like it belongs to the same institute.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section contact" id="contact">
+  <div class="wrap">
+    <div class="contact-box">
+      <h2>Have research, an evaluation, or a report<br>that needs telling well?</h2>
+      <a class="contact-email" href="mailto:thesydneybill@gmail.com">thesydneybill@gmail.com</a>
+<a class="contact-email" href="tel:+254798483044" style="margin-left:24px;">+254 798483044</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span>© 2026 Sydney Bill — Communications &amp; Research Specialist</span>
+  <div class="footer-links">
+    <a href="https://www.linkedin.com/in/sydney-bill-a6a02826a" target="_blank" rel="noopener">LinkedIn</a>
+    
+    
+  </div>
+</footer>
+
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lightboxClose" aria-label="Close">×</button>
+  <img id="lightboxImg" src="" alt="">
+  <div class="lightbox-cap" id="lightboxCap"></div>
+</div>
+
+<script>
+  // Filtering
+  const buttons = document.querySelectorAll('.filter-btn');
+  const pieces = document.querySelectorAll('.piece');
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      buttons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const filter = btn.dataset.filter;
+      pieces.forEach(p => {
+        p.style.display = (filter === 'all' || p.dataset.cat === filter) ? '' : 'none';
+      });
+    });
+  });
+
+  // Lightbox
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightboxImg');
+  const lightboxCap = document.getElementById('lightboxCap');
+  const lightboxClose = document.getElementById('lightboxClose');
+
+  pieces.forEach(p => {
+    p.addEventListener('click', () => {
+      const img = p.querySelector('img');
+      lightboxImg.src = img.src;
+      lightboxImg.alt = img.alt;
+      lightboxCap.textContent = p.dataset.caption || '';
+      lightbox.classList.add('open');
+    });
+  });
+  function closeLightbox(){ lightbox.classList.remove('open'); lightboxImg.src=''; }
+  lightboxClose.addEventListener('click', closeLightbox);
+  lightbox.addEventListener('click', (e) => { if(e.target === lightbox) closeLightbox(); });
+  document.addEventListener('keydown', (e) => { if(e.key === 'Escape') closeLightbox(); });
+</script>
+
+
+
+</body></html>
